@@ -1,0 +1,13 @@
+[user]	
+email=jonas.svensson@intility.no
+name=Jonas Krüger Svensson
+
+[alias]
+lol=log --oneline --decorate --graph --all
+uncommit=reset HEAD~1 --soft
+undelete="!f() { git reset -q -- "$@" && git checkout -- "$@"; }; f"
+
+[includeIf "gitdir:~/Documents/code/personal/"]
+path = ~/Documents/projects/personal/.gitconfig
+[pull]
+rebase = false

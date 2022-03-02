@@ -1,0 +1,11 @@
+# Private GitLab instance
+Host gitlab.intility.com
+  PreferredAuthentications publickey
+  IdentityFile ~/.ssh/gitlab
+
+# Private GitLab instance
+Host github.com
+  PreferredAuthentications publickey
+  UseKeychain yes
+  AddKeysToAgent yes
+  IdentityFile ~/.ssh/github
