@@ -6,4 +6,6 @@ Dotfiles, managed by [`chezmoi`](https://www.chezmoi.io/quick-start/#start-using
 * Apply changes: `chezmoi -v apply`
 * Push changes: `chezmoi cd` + git
 
-
+# Other
+* Shell: `zsh` + `oh-my-zsh` + `starship`
+* Terminal: `alacritty`
