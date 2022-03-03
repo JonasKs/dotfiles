@@ -1,0 +1,40 @@
+" Update plugins with `:PlugUpdate` and install plugins with `:PlugInstall`
+call plug#begin('~/.vim/plugged')
+  " Vim airline, status bar etc.
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
+
+  " Nerd tree, file explorer
+  Plug 'preservim/nerdtree'
+
+  " one dark <3 
+  Plug 'joshdick/onedark.vim'
+  
+  " Syntax highlight
+  Plug 'sheerun/vim-polyglot'
+call plug#end()
+
+set rtp+=/opt/homebrew/opt/fzf
+
+" Airline settings
+let g:airline_theme='onedark'
+
+" Nerd tree config
+" Change arrows
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
+" Show hidden files
+let NERDTreeShowHidden=1 
+" Start NERDTree when Vim is started
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | endif
+" Exit Vim if NERDTree is the only window remaining in the only tab.
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+
+
+" Theme settings
+colorscheme onedark
+syntax on
+set number
+highlight Normal ctermbg=None
+highlight LineNr ctermfg=DarkGrey
