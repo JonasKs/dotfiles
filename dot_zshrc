@@ -30,6 +30,11 @@ if [ -f ~/.aliasesrc ]; then
 fi
 eval "$(starship init zsh)"
 
-# Extra paths
+# Extra paths. At the moment these are empty, but the intention is to dotfile these scripts
 path=('~/.local/share/bin' $path)
 export PATH
+
+# fzf: https://github.com/junegunn/fzf
+# A fuzzy finder
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_OPTS='--height=40%'
