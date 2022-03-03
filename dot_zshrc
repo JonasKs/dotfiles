@@ -3,8 +3,7 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-# Extra paths
-path+=('~/.local/share/bin')
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -118,3 +117,7 @@ if [ -f ~/.aliasesrc ]; then
     . ~/.aliasesrc
 fi
 eval "$(starship init zsh)"
+
+# Extra paths
+path=('~/.local/share/bin' $path)
+export PATH
