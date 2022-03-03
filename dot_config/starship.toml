@@ -48,6 +48,7 @@ symbol = " "
 
 [package]
 symbol = " "
+disabled = true
 
 [perl]
 symbol = " "
@@ -57,6 +58,8 @@ symbol = " "
 
 [python]
 symbol = " "
+version_format='${raw}'
+format='[${symbol} ${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
 
 [ruby]
 symbol = " "
