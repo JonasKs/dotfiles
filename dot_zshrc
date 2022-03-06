@@ -7,14 +7,10 @@ ZSH_THEME="robbyrussell"
 
 # Plugins
 plugins=(
-    celery
     git
     man
-    node
     npm
-    pip
     python
-    rsync
     screen
     zsh-syntax-highlighting
     zsh-autosuggestions
