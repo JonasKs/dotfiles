@@ -4,6 +4,9 @@ Dotfiles, managed by [`chezmoi`](https://www.chezmoi.io/quick-start/#start-using
 ```bash
 sh -c "$(curl -fsLS chezmoi.io/get)" -- init --apply jonasks
 ```
+
+Install vim plugins with `PlugInstall`
+
 # Other
 * Shell: `zsh` + `oh-my-zsh` + `starship`
 * Terminal: `alacritty`

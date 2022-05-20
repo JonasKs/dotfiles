@@ -1,5 +1,6 @@
 alias dotfiles='chezmoi'
 alias cat='bat --paging=never'
+alias batlog='bat --paging=never -l log'
 alias copycat='cat'
 alias code='cd ~/Documents/code'
 alias personal='cd ~/Documents/code/personal'
