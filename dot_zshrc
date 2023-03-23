@@ -46,3 +46,4 @@ export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
 if type sccache > /dev/null; then
   export RUSTC_WRAPPER=sccache
 fi
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
