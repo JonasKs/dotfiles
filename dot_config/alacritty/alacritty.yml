@@ -6,7 +6,7 @@ env:
 
 
 # Send ESC (\x1b) before characters when alt is pressed.
-alt_send_esc: false
+window.option_as_alt: false
 
 
 window:
@@ -22,7 +22,6 @@ window:
     decorations: 
         transparent
         #buttonless
-
 
 # Colors (One Dark)
 colors:
