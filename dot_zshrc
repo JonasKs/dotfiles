@@ -12,6 +12,7 @@ plugins=(
     npm
     python
     screen
+    kubectl 
     zsh-syntax-highlighting
     zsh-autosuggestions
     zsh-completions
@@ -46,4 +47,15 @@ export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
 if type sccache > /dev/null; then
   export RUSTC_WRAPPER=sccache
 fi
+export PATH="$HOME/go/bin:$PATH"
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+export PYTHONPATH=$PYTHONPATH:.
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"   
+
+autoload -Uz compinit
+zstyle ':completion:*' menu select
+fpath+=~/.zfunc
+
+
+# Created by `pipx` on 2024-01-09 08:36:41
+export PATH="$PATH:/Users/jonas/.local/bin"
