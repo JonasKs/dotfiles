@@ -6,3 +6,4 @@ alias personal='cd ~/Documents/code/personal'
 alias pca="gaa && pre-commit run --all-files"
 alias pc="gaa && pre-commit"
 alias python=/opt/homebrew/bin/python3 
+alias vim=nvim
