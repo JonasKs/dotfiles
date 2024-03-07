@@ -2,6 +2,9 @@
 email=jonas.svensson@intility.no
 name=Jonas Krüger Svensson
 
+[core]
+editor = "nvim"
+
 [alias]
 lol=log --oneline --decorate --graph --all
 uncommit=reset HEAD~1 --soft
