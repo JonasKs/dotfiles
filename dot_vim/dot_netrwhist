@@ -1,9 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =7
-let g:netrw_dirhist_7='/Users/jonas/Documents/code/personal/elixir-engineering/ping_machine/lib'
-let g:netrw_dirhist_6='/Users/jonas/Documents/code/personal/elixir-engineering/ping_machine'
-let g:netrw_dirhist_5='/Users/jonas/Documents/code/personal/elixir-engineering/ping_machine/lib'
-let g:netrw_dirhist_4='/Users/jonas/Documents/code/personal/elixir-engineering/ping_machine'
-let g:netrw_dirhist_3='/Users/jonas/.local/share/chezmoi/dot_config/alacritty'
-let g:netrw_dirhist_2='/Users/jonas/.config/alacritty'
-let g:netrw_dirhist_1='/Users/jonas'
