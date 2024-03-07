@@ -1,9 +1,11 @@
 alias dotfiles='chezmoi'
 alias cat='bat --paging=never'
 alias batlog='bat --paging=never -l log'
+alias copycat='bat --paging=never --plain'
 alias copycat='cat'
 alias personal='cd ~/Documents/code/personal'
 alias pca="gaa && pre-commit run --all-files"
 alias pc="gaa && pre-commit"
 alias python=/opt/homebrew/bin/python3 
 alias vim=nvim
+alias nvimconf='cd ~/.config/nvim/'
