@@ -2,7 +2,7 @@ return {
   {
     'mrcjkb/rustaceanvim',
     name = 'rustaceanvim',
-    version = '^6',
+    version = '^8',
     ft = { 'rust' },
     dependencies = 'neovim/nvim-lspconfig',
     lazy = false,

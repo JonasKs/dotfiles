@@ -4,16 +4,24 @@ Dotfiles, managed by [`chezmoi`](https://www.chezmoi.io/quick-start/#start-using
 ```bash
 sh -c "$(curl -fsLS chezmoi.io/get)" -- init --apply jonasks
 ```
-# Other
-* Shell: `zsh` + `oh-my-zsh` + `starship`
-* Terminal: `alacritty`
 
+On first apply, chezmoi will automatically:
+- Install Homebrew (if missing)
+- Install all packages from `Brewfile`
+- Install Go tools (`gofumpt`, `goimports-reviser`, `golines`)
+
+After that, open Neovim and run `:Lazy install` to set up plugins, then `:MasonInstall gopls codelldb` for LSP/DAP.
+
+# Other
+* Shell: `zsh` + `starship`
+* Terminal: `ghostty`
 
 # Commands
 * Add file: `chezmoi add ~/.<filename>`
 * Edit file: `chezmoi edit ~/.<filename>`
-* See changes: `chezmoi diff` 
+* See changes: `chezmoi diff`
 * Apply changes: `chezmoi -v apply`
+* Re-sync local changes: `chezmoi re-add`
 * Push changes: `chezmoi cd` + git
 
 **Brew**

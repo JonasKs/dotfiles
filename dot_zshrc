@@ -29,6 +29,7 @@ eval "$(starship init zsh)"
 export FZF_DEFAULT_OPTS='--height=40%'
 
 # Rust
+export PATH="/opt/homebrew/opt/rustup/bin:$HOME/.cargo/bin:$PATH"
 export CARGO_TARGET_DIR=/Users/jonas/.cargo-target
 
 # Go

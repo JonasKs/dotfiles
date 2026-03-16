@@ -1,5 +1,5 @@
 [user]	
-email=jonas.svensson@intility.no
+email=jonas@vibber.ai
 name=Jonas Krüger Svensson
 
 [core]
@@ -10,18 +10,17 @@ lol=log --oneline --decorate --graph --all
 uncommit=reset HEAD~1 --soft
 undelete="!f() { git reset -q -- "$@" && git checkout -- "$@"; }; f"
 
-[includeIf "gitdir:~/Documents/code/personal/"]
-path = ~/Documents/projects/personal/.gitconfig
 [pull]
 rebase = false
 
-[merge]
-        tool = intellij
-[difftool "intellij"]
-        cmd = /Applications/PyCharm.app/Contents/MacOS/pycharm diff $(cd $(dirname \"$LOCAL\") && pwd)/$(basename \"$LOCAL\") $(cd $(dirname \"$REMOTE\") && pwd)/$(basename \"$REMOTE\")
-[mergetool "intellij"]
-        cmd = /Applications/PyCharm.app/Contents/MacOS/pycharm merge $(cd $(dirname \"$LOCAL\") && pwd)/$(basename \"$LOCAL\") $(cd $(dirname \"$REMOTE\") && pwd)/$(basename \"$REMOTE\") $(cd $(dirname \"$BASE\") && pwd)/$(basename \"$BASE\") $(cd $(dirname \"$MERGED\") && pwd)/$(basename \"$MERGED\")
-        trustExitCode = true
+[user]
+  signingkey = ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDMw40Sx6aHltABqP8urC39svaDylCWOX9j++l8y1rib4e0lU+6b4XrEGJh3HjR1ObJkfZnU1VERpZhLaxvjvkWBXHBWm/haTVkGb0+Yl9f0QKJFNe2tnwtuFlpTGFGi6UheCH6Adc6b8uus55yD3dju5/RfD7ERhO0weQQ2rHseaCn4WvlwlGC6z04Su0Fxnhn5SsdidMH46zbPDdT90PhxobeioeqLGwmAoSpcEsPgl+qHLkwT3TFqsgEY8zRqMiARFSC4cGBjHnctcDzWBG5shvvLpdAkJwKdtkKMzk94ntBk32Q5evh0stf8MmiZJKDftgyf5hcZQwc3vPkhVhQYg1qHN++WFXTe2ERPkKjkiYxGKiD6UsC3aYwDY0QZIYjsLvvKA/hJGcgRdXccUjmB9ihtMqtbjg0M+8ZWBs8VdG7Btd05MKdL9XhxpHPajwFlFqRQKVi/biyZFtiz5PnK3cu0RyM1kM1Fu2qc4XOMEHp08jZFka6HaIRvHGA+cXWUUFt0ig4h9lpJ9IKsrjJTYcnW/V1r1zy7rcoyPQ5AfY23ez1SgiUZSyCmpb7hFQRi+duKrn7gO5azmxM+h+oe+wzryw1wzFZyPgJDKpUGUZcLIh9P/oD2yBdm1TNt3xF/+P6CFQYzY8TmEm2CmVpG1phe7jjFo3lW1eYIe8EtQ==
 
-[url "git@github.com:intility/"]
-    insteadOf = https://github.com/intility/
+[gpg]
+  format = ssh
+
+[gpg "ssh"]
+  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+
+[commit]
+  gpgsign = true

@@ -11,3 +11,6 @@ Host 192.168.1.148
   UseKeychain yes
   AddKeysToAgent yes
   IdentityFile ~/.ssh/ha
+
+Host *
+  IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"

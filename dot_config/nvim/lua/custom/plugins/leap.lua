@@ -1,12 +1,11 @@
 return {
   {
-    'ggandor/leap.nvim',
+    url = 'https://codeberg.org/andyg/leap.nvim',
     name = 'leap',
-    config = function()
-      -- [s]earch leap forward
-      -- [S]earch leap backward
-      -- [s]earch from [g]window
-      require('leap').create_default_mappings()
-    end,
+    keys = {
+      { 's', '<Plug>(leap-forward)', mode = { 'n', 'x', 'o' }, desc = 'Leap forward' },
+      { 'S', '<Plug>(leap-backward)', mode = { 'n', 'x', 'o' }, desc = 'Leap backward' },
+      { 'gs', '<Plug>(leap-from-window)', mode = { 'n', 'x', 'o' }, desc = 'Leap from window' },
+    },
   },
 }
