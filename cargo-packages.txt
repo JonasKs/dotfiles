@@ -1,0 +1,12 @@
+cargo-audit
+cargo-chef
+cargo-deny
+cargo-expand
+cargo-generate
+cargo-nextest
+cargo-tree
+cargo-udeps
+cargo-watch
+drill
+just
+sqlx-cli
