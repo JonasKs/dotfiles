@@ -1,25 +1,22 @@
-# Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 # Theme
 ZSH_THEME="robbyrussell"
-#source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-#source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Set ulimit to a higher number (instead of default 2048) so our tmux sessions
+# don't get killed because of missing fd's..
+ulimit -n 1048576
 
 # Plugins
 plugins=(
     git
     man
-    npm
-    python
-    screen
-    kubectl 
+    kubectl
     zsh-syntax-highlighting
     zsh-autosuggestions
     zsh-completions
 )
 
 source $ZSH/oh-my-zsh.sh
-# User configuration
 
 # Aliases
 if [ -f ~/.aliasesrc ]; then
@@ -27,35 +24,24 @@ if [ -f ~/.aliasesrc ]; then
 fi
 eval "$(starship init zsh)"
 
-# Extra paths. At the moment these are empty, but the intention is to dotfile these scripts
-path=('~/.local/share/bin' $path)
-export PATH
-
-# fzf: https://github.com/junegunn/fzf
-# A fuzzy finder
+# fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_OPTS='--height=40%'
 
-# heroku autocomplete setup
-HEROKU_AC_ZSH_SETUP_PATH=/Users/jonas/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;export PATH="/opt/homebrew/opt/python@3.10/bin:$PATH"
+# Rust
+export CARGO_TARGET_DIR=/Users/jonas/.cargo-target
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
-# enable sccache for rust
-if type sccache > /dev/null; then
-  export RUSTC_WRAPPER=sccache
-fi
+# Go
 export PATH="$HOME/go/bin:$PATH"
-export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
-export PYTHONPATH=$PYTHONPATH:.
-export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"   
 
+# Completions
 autoload -Uz compinit
 zstyle ':completion:*' menu select
 fpath+=~/.zfunc
+fpath=(/Users/jonas/.docker/completions $fpath)
+compinit
 
+export CLAUDE_CODE_USE_FOUNDRY=0
 
-# Created by `pipx` on 2024-01-09 08:36:41
-export PATH="$PATH:/Users/jonas/.local/bin"
+# Secrets (not tracked by chezmoi)
+[ -f ~/.secrets ] && source ~/.secrets

@@ -1,11 +1,13 @@
-# Private GitLab instance
-Host gitlab.intility.com
-  PreferredAuthentications publickey
-  IdentityFile ~/.ssh/gitlab
-
-# Private GitLab instance
+# Private GitHub instance
 Host github.com
   PreferredAuthentications publickey
   UseKeychain yes
   AddKeysToAgent yes
   IdentityFile ~/.ssh/github
+
+# Home Assistant
+Host 192.168.1.148
+  PreferredAuthentications publickey
+  UseKeychain yes
+  AddKeysToAgent yes
+  IdentityFile ~/.ssh/ha

@@ -11,6 +11,7 @@ return {
       -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
       { 'j-hui/fidget.nvim', opts = {} },
     },
+
     config = function()
       -- Brief Aside: **What is LSP?**
       --
@@ -112,6 +113,13 @@ return {
               callback = vim.lsp.buf.clear_references,
             })
           end
+          if client and client.server_capabilities.inlayHintProvider then
+            map('<space>h', function()
+              local current_setting = vim.lsp.inlay_hint.is_enabled { bufnr = event.buf }
+              -- vim.lsp.inlay_hint.enable(event.buf, not current_setting)
+              vim.lsp.inlay_hint.enable(not current_setting, { bufnr = event.buf })
+            end, 'Toggle inlay [h]ints')
+          end
         end,
       })
 
@@ -133,8 +141,15 @@ return {
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
         -- clangd = {},
-        gopls = {},
-        -- pyright = {},
+        gopls = {
+          settings = {
+            gopls = {
+              semanticTokens = true,
+              gofumpt = true,
+            },
+          },
+        },
+        pyright = {},
         -- rust_analyzer = {},  -- do not use!!
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
