@@ -20,6 +20,7 @@ Remote: `git@github.com:JonasKs/dotfiles.git`
 | `dot_tmux.conf` | `~/.tmux.conf` | Catppuccin mocha theme, vim-style keybinds |
 | `dot_aliasesrc` | `~/.aliasesrc` | Shell aliases (bat, nvim, lazygit, chezmoi, git) |
 | `dot_config/nvim/` | `~/.config/nvim/` | Neovim config with lazy.nvim, 20+ plugins |
+| `dot_config/ghostty/config` | `~/.config/ghostty/config` | Ghostty terminal config (XDG path) |
 | `dot_config/starship.toml` | `~/.config/starship.toml` | Prompt config with nerd font symbols |
 | `Brewfile` | (used by install script) | All brew packages, casks, and MAS apps |
 | `cargo-packages.txt` | (reference) | Rust cargo tools list |
