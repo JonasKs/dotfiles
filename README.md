@@ -30,10 +30,4 @@ After that, open Neovim and run `:Lazy install` to set up plugins, then `:MasonI
 
 # Screenshots
 
-Terminal:  
-<img width="815" alt="image" src="https://user-images.githubusercontent.com/5310116/156545153-3220fbb8-493f-40a8-9ea1-4fa5f09eea75.png">
-
-
-
-`vim`:  
-<img width="1080" alt="image" src="https://user-images.githubusercontent.com/5310116/156545435-15316375-e172-4b69-a026-85cb378c899e.png">
+<img width="1728" height="1065" alt="image" src="https://github.com/user-attachments/assets/7209f61d-1d00-47a2-8e66-3584aa970ad8" />
